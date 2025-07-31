@@ -1,4 +1,4 @@
-@Library('Batch_31') _
+@Library('shared-ansible-lib') _
 
 pipeline {
     agent any
