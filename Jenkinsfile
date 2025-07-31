@@ -21,7 +21,7 @@ pipeline {
         failure {
             script {
                 def conf = loadConfig(CONFIG_FILE)
-                notifySlack(conf.SLACK_CHANNEL_NAME, "*Deployment FAILED* for `${conf.ENVIRONMENT}` ❌")
+                notifySlack(conf.SLACK_CHANNEL_NAME, "*Deployment FAILED* for `${conf.ENVIRONMENT}` ")
             }
         }
     }
