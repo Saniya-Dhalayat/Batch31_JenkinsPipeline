@@ -20,7 +20,7 @@ pipeline {
     post {
         failure {
             script {
-                def conf = loadConfig(CONFIG_FILE)
+                def conf = evaluate(readTrusted('config/prod.groovy'))
                 notifySlack(conf.SLACK_CHANNEL_NAME, "*Deployment FAILED* for `${conf.ENVIRONMENT}` ")
             }
         }
